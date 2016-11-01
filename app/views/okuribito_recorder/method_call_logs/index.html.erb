@@ -1,0 +1,24 @@
+<table class="method_call_logs">
+  <tbody>
+    <tr>
+      <th>メソッド名</th>
+      <th>バックトレース</th>
+      <th>記録日時</th>
+    </tr>
+    <% @method_call_logs.each do |method_call_log| %>
+      <tr>
+        <td>
+          <%= method_call_log.class_name %><%= method_call_log.method_symbol %><%= method_call_log.method_name %>
+        </td>
+        <td>
+          <%= method_call_log.back_trace %>
+        </td>
+        <td>
+          <%= method_call_log.created_at %>
+        </td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+
