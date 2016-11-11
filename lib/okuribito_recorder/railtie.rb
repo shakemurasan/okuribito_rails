@@ -9,6 +9,8 @@ module OkuribitoRecorder
                              method_name: method_name,
                              back_trace: caller_info[0])
       end
+      OkuribitoRecorder::RegistMethod.new.update_observe_methods("config/okuribito.yml")
+
       okuribito.apply("config/okuribito.yml") if File.exist?("config/okuribito.yml")
     end
   end
