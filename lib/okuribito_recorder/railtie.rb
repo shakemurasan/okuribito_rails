@@ -3,6 +3,7 @@ module OkuribitoRecorder
 
   class Railtie < ::Rails::Railtie
     config.after_initialize do
+      yaml_path = OkuribitoRecorder.config.setting_path
       okuribito = Okuribito::OkuribitoPatch.new(once_detect: OkuribitoRecorder.config.once_detect) do |method_name, _obj_name, caller_info, class_name, method_symbol|
         situation = MethodCallSituation.find_by(class_name: class_name,
                                                 method_symbol: method_symbol,
@@ -18,10 +19,9 @@ module OkuribitoRecorder
       end
 
       if ActiveRecord::Base.connection.table_exists? 'okuribito_recorder_method_call_situations'
-        RegistMethod.new.update_observe_methods("config/okuribito.yml")
-        okuribito.apply("config/okuribito.yml") if File.exist?("config/okuribito.yml")
+        RegistMethod.new.update_observe_methods(yaml_path)
+        okuribito.apply(yaml_path) if File.exist?(yaml_path)
       end
-
     end
   end
 end
