@@ -16,9 +16,12 @@ module OkuribitoRecorder
                                back_trace: caller_info[0])
         end
       end
-      RegistMethod.new.update_observe_methods("config/okuribito.yml")
 
-      okuribito.apply("config/okuribito.yml") if File.exist?("config/okuribito.yml")
+      if ActiveRecord::Base.connection.table_exists? 'okuribito_recorder_method_call_situations'
+        RegistMethod.new.update_observe_methods("config/okuribito.yml")
+        okuribito.apply("config/okuribito.yml") if File.exist?("config/okuribito.yml")
+      end
+
     end
   end
 end

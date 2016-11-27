@@ -19,13 +19,7 @@ module OkuribitoRecorder
     end
 
     def mount_engine
-      puts "Mounting Forem::Engine at \"/okuribito_recorder\" in config/routes.rb..."
-      insert_into_file("#{Rails.root}/config/routes.rb", :after => /routes.draw.do\n/) do
-        %Q{
-  # This line mounts OkuribitoRecorder's routes at /okuribito_recorder by default.
-  mount OkuribitoRecorder::Engine, :at => '/okuribito_recorder'
-}
-      end
+      route("mount OkuribitoRecorder::Engine, :at => '/okuribito_recorder'")
     end
 
     def finished
