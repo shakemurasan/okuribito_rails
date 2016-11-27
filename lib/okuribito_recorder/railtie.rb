@@ -4,12 +4,19 @@ module OkuribitoRecorder
   class Railtie < ::Rails::Railtie
     config.after_initialize do
       okuribito = Okuribito::OkuribitoPatch.new do |method_name, _obj_name, caller_info, class_name, method_symbol|
-        MethodCallLog.create(class_name: class_name,
-                             method_symbol: method_symbol,
-                             method_name: method_name,
-                             back_trace: caller_info[0])
+        situation = MethodCallSituation.find_by(class_name: class_name,
+                                                method_symbol: method_symbol,
+                                                method_name: method_name)
+        if situation.present?
+          situation.increment!(:called_num)
+          MethodCallLog.create(method_call_situation: situation,
+                               class_name: class_name,
+                               method_symbol: method_symbol,
+                               method_name: method_name,
+                               back_trace: caller_info[0])
+        end
       end
-      OkuribitoRecorder::RegistMethod.new.update_observe_methods("config/okuribito.yml")
+      RegistMethod.new.update_observe_methods("config/okuribito.yml")
 
       okuribito.apply("config/okuribito.yml") if File.exist?("config/okuribito.yml")
     end
