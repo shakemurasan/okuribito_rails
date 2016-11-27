@@ -1,0 +1,28 @@
+<table class="method_call_logs">
+  <tbody>
+    <tr>
+      <th>メソッド名</th>
+      <th>呼出回数</th>
+      <th>監視開始日時</th>
+      <th>最終呼出日時</th>
+    </tr>
+    <% @method_call_situations.each do |method_call_situation| %>
+      <tr>
+        <td>
+          <%= method_call_situation.class_name %><%= method_call_situation.method_symbol %><%= method_call_situation.method_name %>
+        </td>
+        <td>
+          <%= method_call_situation.called_num %>
+        </td>
+        <td>
+          <%= method_call_situation.created_at %>
+        </td>
+        <td>
+          <%= method_call_situation.called_num > 0 ? method_call_situation.updated_at : "未呼出" %>
+        </td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+
