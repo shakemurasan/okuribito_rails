@@ -1,8 +1,8 @@
-.method_call_logs{
+.method_call_info{
   width: 100%;
   border-collapse: collapse;
 }
-.method_call_logs th{
+.method_call_info th{
   width: 25%;
   padding: 6px;
   text-align: left;
@@ -11,8 +11,9 @@
   background-color: #eee;
   border: 1px solid #b9b9b9;
 }
-.method_call_logs td{
+.method_call_info td{
   padding: 6px;
   background-color: #fff;
   border: 1px solid #b9b9b9;
+  font-size: 0.9em
 }
