@@ -3,7 +3,7 @@ module OkuribitoRecorder
 
   class Railtie < ::Rails::Railtie
     config.after_initialize do
-      okuribito = Okuribito::OkuribitoPatch.new do |method_name, _obj_name, caller_info, class_name, method_symbol|
+      okuribito = Okuribito::OkuribitoPatch.new(once_detect: OkuribitoRecorder.config.once_detect) do |method_name, _obj_name, caller_info, class_name, method_symbol|
         situation = MethodCallSituation.find_by(class_name: class_name,
                                                 method_symbol: method_symbol,
                                                 method_name: method_name)
