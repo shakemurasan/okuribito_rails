@@ -1,6 +1,3 @@
-require "okuribito_recorder/config"
-require "kaminari"
-
 module OkuribitoRecorder
   class Engine < ::Rails::Engine
     isolate_namespace OkuribitoRecorder
