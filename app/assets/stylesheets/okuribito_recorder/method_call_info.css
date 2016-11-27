@@ -1,9 +1,9 @@
 .method_call_info{
   width: 100%;
   border-collapse: collapse;
+  margin-bottom: 10px;
 }
 .method_call_info th{
-  width: 25%;
   padding: 6px;
   text-align: left;
   vertical-align: top;
