@@ -1,6 +1,8 @@
 AllCops:
   Exclude:
-    - 'okuribito_rails.gemspec'
+    - "Gemfile"
+    - "okuribito_rails.gemspec"
+    - "Rakefile"
 
 Documentation:
   Enabled: false
