@@ -1,4 +1,4 @@
 Rails.application.routes.draw do
 
-  mount OkuribitoRecorder::Engine => "/okuribito_recorder"
+  mount OkuribitoRails::Engine => "/okuribito_rails"
 end

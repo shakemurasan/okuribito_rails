@@ -1,15 +1,15 @@
 $:.push File.expand_path("../lib", __FILE__)
 
 # Maintain your gem's version:
-require "okuribito_recorder/version"
+require "okuribito_rails/version"
 
 # Describe your gem and declare its dependencies:
 Gem::Specification.new do |s|
-  s.name        = "okuribito_recorder"
-  s.version     = OkuribitoRecorder::VERSION
+  s.name        = "okuribito_rails"
+  s.version     = OkuribitoRails::VERSION
   s.authors     = ["Yasuhiro Matsumura"]
   s.email       = ["ym.contributor@gmail.com"]
-  s.homepage    = "https://github.com/muramurasan/okuribito_recorder"
+  s.homepage    = "https://github.com/muramurasan/okuribito_rails"
   s.summary     = "TBD"
   s.description = "TBD"
 

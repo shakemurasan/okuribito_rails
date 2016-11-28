@@ -1,8 +1,8 @@
 require "kaminari"
 
-require "okuribito_recorder/engine"
-require "okuribito_recorder/railtie"
-require "okuribito_recorder/config"
+require "okuribito_rails/engine"
+require "okuribito_rails/railtie"
+require "okuribito_rails/config"
 
-module OkuribitoRecorder
+module OkuribitoRails
 end

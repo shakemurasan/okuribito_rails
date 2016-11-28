@@ -1,6 +1,6 @@
-class CreateOkuribitoRecorderMethodCallLogs < ActiveRecord::Migration
+class CreateOkuribitoRailsMethodCallLogs < ActiveRecord::Migration
   def change
-    create_table :okuribito_recorder_method_call_logs do |t|
+    create_table :okuribito_rails_method_call_logs do |t|
       t.integer :method_call_situation_id, null: false
       t.string :class_name, null: false
       t.string :method_symbol, null: false
@@ -9,7 +9,7 @@ class CreateOkuribitoRecorderMethodCallLogs < ActiveRecord::Migration
 
       t.timestamps
     end
-    add_index :okuribito_recorder_method_call_logs, :class_name
-    add_index :okuribito_recorder_method_call_logs, :method_name
+    add_index :okuribito_rails_method_call_logs, :class_name
+    add_index :okuribito_rails_method_call_logs, :method_name
   end
 end

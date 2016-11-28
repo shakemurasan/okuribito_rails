@@ -1,6 +1,6 @@
-require_dependency "okuribito_recorder/application_controller"
+require_dependency "okuribito_rails/application_controller"
 
-module OkuribitoRecorder
+module OkuribitoRails
   class MethodCallLogsController < ApplicationController
     def index
       @method_call_logs = MethodCallLog.page(params[Kaminari.config.param_name]).per(20)

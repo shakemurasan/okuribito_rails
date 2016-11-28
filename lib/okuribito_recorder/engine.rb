@@ -1,6 +1,6 @@
-module OkuribitoRecorder
+module OkuribitoRails
   class Engine < ::Rails::Engine
-    isolate_namespace OkuribitoRecorder
+    isolate_namespace OkuribitoRails
   end
 
   class << self

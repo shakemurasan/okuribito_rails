@@ -1,4 +1,4 @@
-module OkuribitoRecorder
+module OkuribitoRails
   module ApplicationHelper
   end
 end

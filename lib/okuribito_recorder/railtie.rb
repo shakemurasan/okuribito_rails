@@ -1,12 +1,12 @@
-require "okuribito_recorder/regist_method"
-require "okuribito_recorder/observe_method"
+require "okuribito_rails/regist_method"
+require "okuribito_rails/observe_method"
 
-module OkuribitoRecorder
+module OkuribitoRails
   class Railtie < ::Rails::Railtie
     config.after_initialize do
-      return unless ActiveRecord::Base.connection.table_exists? 'okuribito_recorder_method_call_situations'
+      return unless ActiveRecord::Base.connection.table_exists? 'okuribito_rails_method_call_situations'
 
-      yaml_path = OkuribitoRecorder.config.setting_path
+      yaml_path = OkuribitoRails.config.setting_path
 
       # Update database by observed methods.
       RegistMethod.new.update_observe_methods(yaml_path)

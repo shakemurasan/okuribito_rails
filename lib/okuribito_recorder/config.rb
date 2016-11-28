@@ -1,4 +1,4 @@
-module OkuribitoRecorder
+module OkuribitoRails
   class Config
     include ActiveSupport::Configurable
 

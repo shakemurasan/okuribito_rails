@@ -1,6 +1,6 @@
 require "yaml"
 
-module OkuribitoRecorder
+module OkuribitoRails
   class RegistMethod
     def update_observe_methods(path)
       input = yaml_to_array(path)
