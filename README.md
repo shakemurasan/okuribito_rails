@@ -1,12 +1,12 @@
-![OkuribitoRails](https://raw.githubusercontent.com/muramurasan/okuribito_rails/master/doc/sample.png)
-
 # OkuribitoRails
 
 OkuribitoRails is an engine for Rails that aims to be the managing method call status.
 
+![OkuribitoRails](https://raw.githubusercontent.com/muramurasan/okuribito_rails/master/doc/sample.png)
+
 # Installation
 
-Installing Okuribito is easy.
+Installing OkuribitoRails is easy.
 
 ## Specify Gem dependencies
 
@@ -38,6 +38,14 @@ rake db:migrate
 
 Create a file that defines the method to be monitored.
 
+```ruby
+User:
+  - '#feed'
+  - '#profile'
+Micropost:
+  - '.from_users_followed_by'
+```
+
 And put it in the path defined in `config / initializers / okuribito_rails.rb`.
 
 (By Default `config/okuribito.yml`)
@@ -46,6 +54,9 @@ And put it in the path defined in `config / initializers / okuribito_rails.rb`.
 
 Here's a comprehensive list of the features currently in OkuribitoRails:
 
+* Monitoring
+  * During application execution, monitor specified method calls
+    * After detecting the method call, register the call history in the DB
 * Web UI
   * Viewing monitored methods
   * Viewing call history of monitored methods
