@@ -1,3 +1,5 @@
+[![Code Climate](https://codeclimate.com/github/muramurasan/okuribito_rails.png)](https://codeclimate.com/github/muramurasan/okuribito_rails)
+
 # OkuribitoRails
 
 OkuribitoRails is an engine for Rails that aims to be the managing method call status.
