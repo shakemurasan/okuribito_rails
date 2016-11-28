@@ -4,6 +4,11 @@ module OkuribitoRails
   class InstallGenerator < Rails::Generators::Base
     class_option "with-migrate", :type => :boolean
 
+    def start
+      puts "Start installing okuribito_rails..."
+      puts ("*" * 80) + "\n"
+    end
+
     def install_migrations
       puts "Copying over OkuribitoRails migrations..."
       Dir.chdir(Rails.root) do
@@ -30,8 +35,10 @@ module OkuribitoRails
     end
 
     def finished
-      puts "\n\n" + ("*" * 53)
+      puts "\n" + ("*" * 80)
       puts "Done! OkuribitoRails has been successfully installed."
+      puts "Please create and deploy a configuration file of okuribito."
+      puts "(The yaml that defines the method you want to monitor)"
     end
   end
 end
