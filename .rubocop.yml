@@ -1,0 +1,28 @@
+AllCops:
+  Exclude:
+    - 'okuribito_rails.gemspec'
+
+Documentation:
+  Enabled: false
+
+LineLength:
+  Max: 100
+  Exclude:
+    - "spec/**/*"
+
+Style/StringLiterals:
+  EnforcedStyle: double_quotes
+  SupportedStyles:
+    - double_quotes
+
+Metrics/CyclomaticComplexity:
+  Max: 10
+
+Metrics/PerceivedComplexity:
+  Max: 9
+
+Metrics/MethodLength:
+  Max: 20
+
+Metrics/AbcSize:
+  Max: 30

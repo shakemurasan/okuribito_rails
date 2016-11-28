@@ -4,7 +4,7 @@ require "okuribito_rails/observe_method"
 module OkuribitoRails
   class Railtie < ::Rails::Railtie
     config.after_initialize do
-      if ActiveRecord::Base.connection.table_exists? 'okuribito_rails_method_call_situations'
+      if ActiveRecord::Base.connection.table_exists? "okuribito_rails_method_call_situations"
         yaml_path = OkuribitoRails.config.setting_path
 
         # Update database by observed methods.
