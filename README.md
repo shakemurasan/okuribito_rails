@@ -1,4 +1,4 @@
-![OkuribitoRails](https://raw.githubusercontent.com/radar/okuribito_rails/doc/sample.png)
+![OkuribitoRails](https://raw.githubusercontent.com/muramurasan/okuribito_rails/master/doc/sample.png)
 
 # OkuribitoRails
 
