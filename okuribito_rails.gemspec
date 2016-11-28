@@ -12,8 +12,8 @@ Gem::Specification.new do |s|
   s.homepage    = "https://github.com/muramurasan/okuribito_rails"
   s.summary     = "OkuribitoRails is an engine for Rails that aims to be the managing method call status."
   s.description = "OkuribitoRails is an engine for Rails that aims to be the managing method call status." \
-                  "You write the method name you want to monitor in the configuration file." \
-                  "OkuribitoRails detects a method call during application execution and registers the call information in the DB." \
+                  "You should create a configuration file. (Describe the method name you want to monitor)" \
+                  "When OkuribitoRails detected a method call during application execution, it registers the method call information in the DB." \
                   "In other words, you can identify methods that have not been called from anywhere in production!"
 
   s.files = Dir["{app,config,db,lib}/**/*", "MIT-LICENSE", "Rakefile", "README.md"]
