@@ -1,9 +1,7 @@
 $:.push File.expand_path("../lib", __FILE__)
 
-# Maintain your gem's version:
 require "okuribito_rails/version"
 
-# Describe your gem and declare its dependencies:
 Gem::Specification.new do |s|
   s.name        = "okuribito_rails"
   s.version     = OkuribitoRails::VERSION
@@ -21,6 +19,8 @@ Gem::Specification.new do |s|
   s.add_dependency "kaminari"
 
   s.add_development_dependency "sqlite3"
+  s.add_development_dependency "rspec"
   s.add_development_dependency "rspec-rails"
+  s.add_development_dependency "factory_girl_rails"
   s.add_development_dependency "rubocop"
 end
