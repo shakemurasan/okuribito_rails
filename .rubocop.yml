@@ -1,8 +1,8 @@
 AllCops:
   Exclude:
-    - "Gemfile"
     - "okuribito_rails.gemspec"
     - "Rakefile"
+    - "vendor/**/*"
 
 Documentation:
   Enabled: false
@@ -28,3 +28,10 @@ Metrics/MethodLength:
 
 Metrics/AbcSize:
   Max: 30
+
+Rails:
+  Enabled: true
+
+Rails/Output:
+  Exclude:
+    - "lib/generators/okuribito_rails/install_generator.rb"
