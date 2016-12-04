@@ -3,6 +3,7 @@ AllCops:
     - "okuribito_rails.gemspec"
     - "Rakefile"
     - "vendor/**/*"
+    - "spec/dummy/**/*"
 
 Documentation:
   Enabled: false
