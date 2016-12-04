@@ -1,5 +1,6 @@
 [![CircleCI](https://circleci.com/gh/muramurasan/okuribito_rails.svg?style=svg)](https://circleci.com/gh/muramurasan/okuribito_rails)
 [![Code Climate](https://codeclimate.com/github/muramurasan/okuribito_rails.png)](https://codeclimate.com/github/muramurasan/okuribito_rails)
+[![Test Coverage](https://codeclimate.com/github/muramurasan/okuribito_rails/badges/coverage.svg)](https://codeclimate.com/github/muramurasan/okuribito_rails/coverage)
 
 # OkuribitoRails
 
