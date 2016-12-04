@@ -1,0 +1,18 @@
+machine:
+  timezone: Asia/Tokyo
+  ruby:
+    version:
+      2.2.2
+dependencies:
+  override:
+    - bundle install:
+        timeout: 180
+database:
+  pre:
+    - mv config/database.yml.ci config/database.yml
+  override:
+    - bundle exec rake db:create RAILS_ENV=test
+    - bundle exec rake db:migrate RAILS_ENV=test
+test:
+  override:
+    - bundle exec rspec spec/

@@ -1,0 +1,8 @@
+test:
+  adapter: mysql2
+  encoding: utf8
+  reconnect: false
+  database: okuribito_rails_test
+  pool: 5
+  timeout: 10000
+  username: ubuntu

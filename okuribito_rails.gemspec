@@ -11,7 +11,7 @@ Gem::Specification.new do |s|
   s.summary     = "OkuribitoRails is an engine for Rails that aims to be the managing method call status."
   s.description = "OkuribitoRails is an engine for Rails that aims to be the managing method call status."
 
-  s.files = Dir["{app,config,db,lib}/**/*", "MIT-LICENSE", "Rakefile", "README.md"]
+  s.files = Dir["{app,db,lib}/**/*", "config/routes.rb", "MIT-LICENSE", "Rakefile", "README.md"]
   s.test_files = Dir["spec/**/*"]
 
   s.add_dependency "okuribito"
