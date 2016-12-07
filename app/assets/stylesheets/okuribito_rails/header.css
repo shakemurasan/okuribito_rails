@@ -1,0 +1,32 @@
+.header {
+  width: 100%;
+  background-color: #2E2F30;
+  padding: 1px;
+  margin-bottom: 20px;
+}
+
+.global-nav {
+  text-align: right;
+}
+.global-nav .nav-item {
+  display: inline-block;
+  margin: 0 20px;
+}
+.global-nav .nav-item a {
+  display: inline-block;
+  width: 150px;
+  height: 30px;
+  line-height: 30px;
+  text-align: center;
+  border-radius: 8px;
+  color: #fff;
+  font-size: 1.3rem;
+  letter-spacing: 1px;
+  transition: 0.15s;
+  text-decoration: none;
+}
+.global-nav .nav-item.active a,
+.global-nav .nav-item a:hover {
+  background-color: #d03c56;
+  color: #fff;
+}

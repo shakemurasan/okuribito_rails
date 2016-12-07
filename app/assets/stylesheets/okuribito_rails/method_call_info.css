@@ -1,7 +1,8 @@
 .method_call_info{
-  width: 100%;
+  width: 98%;
+  margin-left: auto;
+  margin-right: auto;
   border-collapse: collapse;
-  margin-bottom: 10px;
 }
 .method_call_info th{
   padding: 6px;
