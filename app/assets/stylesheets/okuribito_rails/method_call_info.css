@@ -1,7 +1,5 @@
 .method_call_info{
-  width: 98%;
-  margin-left: auto;
-  margin-right: auto;
+  width: 100%;
   border-collapse: collapse;
 }
 .method_call_info th{

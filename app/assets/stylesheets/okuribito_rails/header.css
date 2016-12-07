@@ -1,20 +1,27 @@
 .header {
   width: 100%;
-  background-color: #2E2F30;
-  padding: 1px;
+  background-color: #000;
+  height: 60px;
+  padding: 5px;
   margin-bottom: 20px;
 }
 
 .global-nav {
   text-align: right;
 }
-.global-nav .nav-item {
+.global-nav .nav-logo {
+  float: left;
   display: inline-block;
-  margin: 0 20px;
+  margin-top: -18px;
+}
+.global-nav .nav-item {
+  float: right;
+  display: inline-block;
+  margin: 0 10px;
 }
 .global-nav .nav-item a {
   display: inline-block;
-  width: 150px;
+  width: 160px;
   height: 30px;
   line-height: 30px;
   text-align: center;
