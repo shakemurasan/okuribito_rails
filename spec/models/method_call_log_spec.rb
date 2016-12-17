@@ -9,9 +9,9 @@ describe OkuribitoRails::MethodCallLog do
                       method_symbol: method_symbol,
                       method_name: method_name)
   end
-  let(:class_name) { "User" }
-  let(:method_symbol) { "." }
-  let(:method_name) { "feed" }
+  let(:class_name) { "TestTarget" }
+  let(:method_symbol) { "#" }
+  let(:method_name) { "deprecated_method" }
 
   subject { method_call_log }
 
@@ -24,7 +24,7 @@ describe OkuribitoRails::MethodCallLog do
     it { is_expected.to be_valid }
 
     context "with valid long name" do
-      let(:class_name) { "a" * 255 }
+      let(:class_name) { "A" << "a" * 254 }
       it { is_expected.to be_valid }
     end
   end
@@ -41,7 +41,7 @@ describe OkuribitoRails::MethodCallLog do
     end
 
     context "with too long name" do
-      let(:class_name) { "a" * 256 }
+      let(:class_name) { "A" << "a" * 255 }
       it { is_expected.not_to be_valid }
     end
   end
