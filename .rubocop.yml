@@ -4,6 +4,7 @@ AllCops:
     - "Rakefile"
     - "vendor/**/*"
     - "spec/dummy/**/*"
+    - "spec/spec_helper.rb"
 
 Documentation:
   Enabled: false
