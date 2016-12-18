@@ -37,3 +37,14 @@ Rails:
 Rails/Output:
   Exclude:
     - "lib/generators/okuribito_rails/install_generator.rb"
+
+RedundantReturn:
+  Exclude:
+    - "app/controllers/**/*"
+
+GuardClause:
+  MinBodyLength: 4
+
+Style/ActionFilter:
+  Exclude:
+    - "app/controllers/okuribito_rails/application_controller.rb"
