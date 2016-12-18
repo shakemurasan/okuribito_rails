@@ -14,7 +14,7 @@ module OkuribitoRails
     private
 
     def prohibit_env?
-      OkuribitoRails.config.prohibit_okuribito.include?(ENV["RAILS_ENV"])
+      OkuribitoRails.config.prohibit_observe.include?(ENV["RAILS_ENV"])
     end
 
     def before_migrate?

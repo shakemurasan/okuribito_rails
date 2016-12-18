@@ -14,7 +14,7 @@ module OkuribitoRails
       ["test"]
     end
 
-    config_accessor :prohibit_okuribito do
+    config_accessor :prohibit_observe do
       ["test"]
     end
   end
