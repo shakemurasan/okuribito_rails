@@ -4,4 +4,10 @@ OkuribitoRails.configure do |config|
 
   # Detecting method calls only once during application running.
   config.once_detect = true
+
+  # You will not be able to access the Web UI in the specified environment.
+  config.prohibit_webui = ["test"]
+
+  # It will not monitor method calls in the specified environment.
+  config.prohibit_okuribito = ["test"]
 end
