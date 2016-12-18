@@ -10,7 +10,6 @@ module OkuribitoRails
                                                 method_symbol: method_symbol,
                                                 method_name: method_name)
         if situation.present?
-          situation.increment!(:called_num)
           MethodCallLog.create(method_call_situation: situation,
                                class_name: class_name,
                                method_symbol: method_symbol,

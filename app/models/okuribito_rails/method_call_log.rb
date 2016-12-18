@@ -1,6 +1,6 @@
 module OkuribitoRails
   class MethodCallLog < ActiveRecord::Base
-    belongs_to :method_call_situation
+    belongs_to :method_call_situation, counter_cache: :called_num
 
     validates :class_name, presence: true, length: { minimum: 1, maximum: 255 }
     validates :method_symbol, presence: true, inclusion: { in: %w(. #) }
