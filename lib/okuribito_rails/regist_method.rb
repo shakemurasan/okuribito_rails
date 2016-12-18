@@ -6,20 +6,12 @@ module OkuribitoRails
       input = yaml_to_array(path)
       base  = db_to_array
       new_methods = input - base
-      new_methods.each do |new_method|
-        array = new_method.split(/\s*(#|\.)\s*/)
-        MethodCallSituation.create(class_name: array[0],
-                                   method_symbol: array[1],
-                                   method_name: array[2])
-      end
-      delete_methods = base - input
-      delete_methods.each do |delete_method|
-        array = delete_method.split(/\s*(#|\.)\s*/)
-        MethodCallSituation.find_by(class_name: array[0],
-                                    method_symbol: array[1],
-                                    method_name: array[2]).destroy
-      end
+      new_methods.each { |new_method| regist_method(new_method) }
+      old_methods = base - input
+      old_methods.each { |old_method| destroy_method(old_method) }
     end
+
+    private
 
     def yaml_to_array(path)
       yaml = YAML.load_file(path)
@@ -39,6 +31,16 @@ module OkuribitoRails
         methods_array.push(result.class_name + result.method_symbol + result.method_name)
       end
       methods_array
+    end
+
+    def regist_method(method)
+      a = method.split(/\s*(#|\.)\s*/)
+      MethodCallSituation.create(class_name: a[0], method_symbol: a[1], method_name: a[2])
+    end
+
+    def destroy_method(method)
+      a = method.split(/\s*(#|\.)\s*/)
+      MethodCallSituation.find_by(class_name: a[0], method_symbol: a[1], method_name: a[2]).destroy
     end
   end
 end

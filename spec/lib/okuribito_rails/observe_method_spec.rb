@@ -1,6 +1,5 @@
 require "spec_helper"
 require "support/test_target"
-require "okuribito"
 
 describe OkuribitoRails::ObserveMethod do
   let(:setting_path) { "spec/support/test_config.yml" }
