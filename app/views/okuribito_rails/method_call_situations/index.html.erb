@@ -2,9 +2,8 @@
   <tbody>
     <tr>
       <th>Method name</th>
-      <th>Number of calls</th>
-      <th>Monitoring start date</th>
-      <th>Last call date</th>
+      <th>Number of times called</th>
+      <th>Observation start date</th>
     </tr>
     <% @method_call_situations.each do |method_call_situation| %>
       <tr>
@@ -16,9 +15,6 @@
         </td>
         <td>
           <%= method_call_situation.created_at %>
-        </td>
-        <td>
-          <%= method_call_situation.called_num > 0 ? method_call_situation.updated_at : "Not called" %>
         </td>
       </tr>
     <% end %>
