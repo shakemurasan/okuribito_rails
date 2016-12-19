@@ -1,11 +1,25 @@
 <div class="search-area">
   <%= form_tag(method_call_situations_path, method: "get") do |f| %>
     <dl class="search">
-      <dt><label>Class name</label><%= text_field_tag :class_name, params[:class_name], placeholder: "Class name" %></dt>
-      <dt><label>Method name</label><%= text_field_tag :method_name, params[:method_name], placeholder: "Method name" %></dt>
-      <dt><label>x days passed</label><%= number_field_tag :x_days_passed, params[:x_days_passed], placeholder: 0 %></dt>
-      <dt><label>Uncalled method</label><%= check_box_tag :uncalled_method, true, params[:uncalled_method]  %></dt>
-      <dd><button>Search</button></dd>
+      <dt>
+        <label>Class name</label>
+        <%= text_field_tag :class_name, params[:class_name], placeholder: "Class name" %>
+      </dt>
+      <dt>
+        <label>Method name</label>
+        <%= text_field_tag :method_name, params[:method_name], placeholder: "Method name" %>
+      </dt>
+      <dt>
+        <label>x days passed</label>
+        <%= number_field_tag :x_days_passed, params[:x_days_passed], placeholder: 0 %>
+      </dt>
+      <dt>
+        <label>Uncalled method</label>
+        <%= check_box_tag :uncalled_method, true, params[:uncalled_method]  %>
+      </dt>
+      <dd>
+        <button>Search</button>
+      </dd>
     </dl>
   <% end %>
 </div>
