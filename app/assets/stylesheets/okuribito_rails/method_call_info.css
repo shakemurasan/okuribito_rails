@@ -1,8 +1,55 @@
-.method_call_info{
+div.search-area {
+  padding: 4px;
+  border: 1px solid #aaa;
+  margin-bottom: 20px;
+}
+
+dl.search {
+  position: relative;
+  margin: 10px;
+}
+dl.search dt {
+  margin-right: 30px;
+  background-color: #fff;
+  display: inline-block;
+}
+dl.search dt label {
+  height: 24px;
+  line-height: 24px;
+}
+dl.search dt input[type="text"], input[type="number"] {
+  width: 100%;
+  height: 24px;
+  line-height: 24px;
+  background: none;
+  border: 1px solid #aaa;
+}
+dl.search dt input[type="checkbox"] {
+  width: 100%;
+}
+dl.search dd {
+  position: absolute;
+  top: 0;
+  right: 0;
+}
+dl.search dd button {
+  display: block;
+  width: 100px;
+  height: 50px;
+  line-height: 50px;
+  color: #fff;
+  text-align: center;
+  background-color: #f66;
+  border: 1px solid #c66;
+  font-size: 1.1em;
+  border-radius: 10px;
+}
+
+.method_call_info {
   width: 100%;
   border-collapse: collapse;
 }
-.method_call_info th{
+.method_call_info th {
   padding: 6px;
   text-align: left;
   vertical-align: top;
@@ -10,7 +57,7 @@
   background-color: #eee;
   border: 1px solid #b9b9b9;
 }
-.method_call_info td{
+.method_call_info td {
   padding: 6px;
   background-color: #fff;
   border: 1px solid #b9b9b9;
