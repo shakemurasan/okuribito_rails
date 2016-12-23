@@ -19,52 +19,12 @@ Here's a comprehensive list of the features currently in OkuribitoRails:
 * Monitoring
   * During application execution, monitor specified method calls
     * After detecting the method call, register the call history in the DB
+    * You can enable or disable monitoring of method calls (depending on RAILS_ENV)
 * Web UI
   * Viewing monitored methods
   * Viewing call history of monitored methods
+  * You can hide or show WebUI (depending on RAILS_ENV)
 
-# Installation
+# Getting Started
 
-Installing OkuribitoRails is easy.
-
-## Specify Gem dependencies
-
-```ruby
-gem 'okuribito_rails'
-```
-
-## Run the installer
-
-Run the installer.
-
-```shell
-rails g okuribito_rails:install
-```
-
-The installer makes the following settings.
-
-- Create migration files (Used by OkuribitoRails)
-- Updating routing (Mount engine)
-- Create default configuration
-
-## Run db:migrate
-
-```shell
-rake db:migrate
-```
-
-## Definition of monitoring method
-
-Create a file that defines the method to be monitored.
-
-```ruby
-User:
-  - '#feed'
-  - '#profile'
-Micropost:
-  - '.from_users_followed_by'
-```
-
-And put it in the path defined in `config/initializers/okuribito_rails.rb`.
-
-(By Default `config/okuribito.yml`)
+Please read [Getting Started](https://github.com/muramurasan/okuribito_rails/wiki/Getting-Started)
