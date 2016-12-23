@@ -6,11 +6,9 @@
 
 OkuribitoRails is an engine for Rails that aims to manage method call status.
 
-You should create a configuration file. (Describe the method name you want to monitor)
+OkuribitoRails monitors method calls with YAML.
 
-When OkuribitoRails detected a method call during application execution, it registers the method call information in the DB.
-
-In other words, you can identify methods that have not been called from anywhere in production!
+You can identify methods that have not been called from anywhere!
 
 ![Sample](https://raw.githubusercontent.com/muramurasan/okuribito_rails/master/doc/sample.png)
 
