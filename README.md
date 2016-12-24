@@ -4,67 +4,45 @@
 
 # OkuribitoRails
 
+https://rubygems.org/gems/okuribito_rails
+
+![Sample](https://raw.githubusercontent.com/muramurasan/okuribito_rails/master/doc/sample.png)
+
 OkuribitoRails is an engine for Rails that aims to manage method call status.
 
 OkuribitoRails monitors method calls with YAML.
 
 You can identify methods that have not been called from anywhere!
 
-![Sample](https://raw.githubusercontent.com/muramurasan/okuribito_rails/master/doc/sample.png)
-
 # Features
 
 Here's a comprehensive list of the features currently in OkuribitoRails:
 
-* Monitoring
+* Monitoring method call
   * During application execution, monitor specified method calls
     * After detecting the method call, register the call history in the DB
+    * You can enable or disable monitoring of method calls (depending on RAILS_ENV)
 * Web UI
   * Viewing monitored methods
   * Viewing call history of monitored methods
+  * You can hide or show WebUI (depending on RAILS_ENV)
 
-# Installation
+# Getting started
 
-Installing OkuribitoRails is easy.
+Please read [Getting Started](https://github.com/muramurasan/okuribito_rails/wiki/Getting-Started).
 
-## Specify Gem dependencies
+# More information
 
-```ruby
-gem 'okuribito_rails'
-```
+The following link have useful information on using OkuribitoRails.
 
-## Run the installer
+https://github.com/muramurasan/okuribito_rails/wiki
 
-Run the installer.
+# Caution!
 
-```shell
-rails g okuribito_rails:install
-```
+OkuribitoRails does not support namespaces.
 
-The installer makes the following settings.
+We already scheduled the feature, please wait.
 
-- Create migration files (Used by OkuribitoRails)
-- Updating routing (Mount engine)
-- Create default configuration
+# License
 
-## Run db:migrate
-
-```shell
-rake db:migrate
-```
-
-## Definition of monitoring method
-
-Create a file that defines the method to be monitored.
-
-```ruby
-User:
-  - '#feed'
-  - '#profile'
-Micropost:
-  - '.from_users_followed_by'
-```
-
-And put it in the path defined in `config/initializers/okuribito_rails.rb`.
-
-(By Default `config/okuribito.yml`)
+The gem is available as open source under the terms of the [MIT License](http://opensource.org/licenses/MIT).
