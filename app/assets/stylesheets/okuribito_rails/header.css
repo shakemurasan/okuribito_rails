@@ -3,20 +3,18 @@
   background-color: #000;
   padding-top: 7px;
   padding-bottom: 8px;
-  margin-bottom: 20px;
+  margin-bottom: 10px;
   display:inline-block;
 }
 .header-logo {
   float: left;
-  display: inline-block;
 }
 .global-nav {
   text-align: right;
 }
 .global-nav .nav-item {
   float: right;
-  display: inline-block;
-  margin: 0 10px;
+  margin: 0 20px;
 }
 .global-nav .nav-item a {
   display: inline-block;
