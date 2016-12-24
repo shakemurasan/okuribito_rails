@@ -1,18 +1,17 @@
 .header {
   width: 100%;
   background-color: #000;
-  height: 60px;
-  padding: 5px;
+  padding-top: 7px;
+  padding-bottom: 8px;
   margin-bottom: 20px;
+  display:inline-block;
 }
-
-.global-nav {
-  text-align: right;
-}
-.global-nav .nav-logo {
+.header-logo {
   float: left;
   display: inline-block;
-  margin-top: -18px;
+}
+.global-nav {
+  text-align: right;
 }
 .global-nav .nav-item {
   float: right;
