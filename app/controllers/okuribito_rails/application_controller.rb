@@ -2,11 +2,7 @@ module OkuribitoRails
   class ApplicationController < ActionController::Base
     protect_from_forgery
 
-    if Gem::Version.new(Rails.version) < Gem::Version.new(4)
-      before_filter :available_action!
-    else
-      before_action :available_action!
-    end
+    before_action :available_action!
 
     def available_action!
       if prohibited_env?
