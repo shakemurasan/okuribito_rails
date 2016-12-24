@@ -1,4 +1,4 @@
 OkuribitoRails::Engine.routes.draw do
-  resources :method_call_logs
-  resources :method_call_situations
+  resources :method_call_logs, only: [:index]
+  resources :method_call_situations, only: [:index]
 end

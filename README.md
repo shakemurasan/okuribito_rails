@@ -4,19 +4,21 @@
 
 # OkuribitoRails
 
+https://rubygems.org/gems/okuribito_rails
+
+![Sample](https://raw.githubusercontent.com/muramurasan/okuribito_rails/master/doc/sample.png)
+
 OkuribitoRails is an engine for Rails that aims to manage method call status.
 
 OkuribitoRails monitors method calls with YAML.
 
 You can identify methods that have not been called from anywhere!
 
-![Sample](https://raw.githubusercontent.com/muramurasan/okuribito_rails/master/doc/sample.png)
-
 # Features
 
 Here's a comprehensive list of the features currently in OkuribitoRails:
 
-* Monitoring
+* Monitoring method call
   * During application execution, monitor specified method calls
     * After detecting the method call, register the call history in the DB
     * You can enable or disable monitoring of method calls (depending on RAILS_ENV)
@@ -25,6 +27,22 @@ Here's a comprehensive list of the features currently in OkuribitoRails:
   * Viewing call history of monitored methods
   * You can hide or show WebUI (depending on RAILS_ENV)
 
-# Getting Started
+# Getting started
 
-Please read [Getting Started](https://github.com/muramurasan/okuribito_rails/wiki/Getting-Started)
+Please read [Getting Started](https://github.com/muramurasan/okuribito_rails/wiki/Getting-Started).
+
+# More information
+
+The following link have useful information on using OkuribitoRails.
+
+https://github.com/muramurasan/okuribito_rails/wiki
+
+# Caution!
+
+OkuribitoRails does not support namespaces.
+
+We already scheduled the feature, please wait.
+
+# License
+
+The gem is available as open source under the terms of the [MIT License](http://opensource.org/licenses/MIT).
