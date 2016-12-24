@@ -11,7 +11,7 @@ module OkuribitoRails
 
     scope :with_class_name, ->(class_name) { where(class_name: class_name) }
     scope :with_method_name, ->(method_name) { where(method_name: method_name) }
-    scope :with_days_passed, ->(num) { where("updated_at >= ?", Time.zone.today.days_ago(num)) }
+    scope :with_days_passed, ->(num) { where("created_at >= ?", Time.zone.today.days_ago(num)) }
     scope :with_uncalled_method, -> { where(called_num: 0) }
 
     def self.search(args)
