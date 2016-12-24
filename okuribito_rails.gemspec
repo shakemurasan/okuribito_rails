@@ -8,8 +8,8 @@ Gem::Specification.new do |s|
   s.authors     = ["Yasuhiro Matsumura"]
   s.email       = ["ym.contributor@gmail.com"]
   s.homepage    = "https://github.com/muramurasan/okuribito_rails"
-  s.summary     = "OkuribitoRails is an engine for Rails that aims to manage method call status."
-  s.description = "OkuribitoRails is an engine for Rails that aims to manage method call status."
+  s.summary     = "OkuribitoRails is an engine for Rails that aims to manage method call status. And you can identify uncalled methods."
+  s.description = "OkuribitoRails is an engine for Rails that aims to manage method call status. And you can identify uncalled methods."
 
   s.files = Dir["{app,db,lib}/**/*", "config/routes.rb", "MIT-LICENSE", "Rakefile", "README.md"]
   s.test_files = Dir["spec/**/*"]
