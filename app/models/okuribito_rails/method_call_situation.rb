@@ -8,5 +8,19 @@ module OkuribitoRails
     validates :called_num,
               presence: true,
               numericality: { only_integer: true, less_than_or_equal_to: 9_999 }
+
+    scope :with_class_name, ->(class_name) { where(class_name: class_name) }
+    scope :with_method_name, ->(method_name) { where(method_name: method_name) }
+    scope :with_days_passed, ->(num) { where("updated_at >= ?", Time.zone.today.days_ago(num)) }
+    scope :with_uncalled_method, -> { where(called_num: 0) }
+
+    def self.search(args)
+      mcs = self
+      mcs = mcs.with_class_name(args[:class_name]) if args[:class_name].present?
+      mcs = mcs.with_method_name(args[:method_name]) if args[:method_name].present?
+      mcs = mcs.with_days_passed(args[:x_days_passed].to_i) if args[:x_days_passed].present?
+      mcs = mcs.with_uncalled_method if args[:uncalled_method].present?
+      mcs
+    end
   end
 end

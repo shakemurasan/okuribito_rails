@@ -4,9 +4,15 @@ module OkuribitoRails
   class MethodCallSituationsController < ApplicationController
     def index
       @method_call_situations = MethodCallSituation
+                                .search(params.presence || {})
                                 .page(params[Kaminari.config.param_name])
-                                .per(20)
                                 .order(class_name: :asc, method_symbol: :asc, method_name: :asc)
+    end
+
+    private
+
+    def method_call_situation_params
+      params.permit(:class_name, :method_name, :x_days_passed, :uncalled_method)
     end
   end
 end
