@@ -29,7 +29,8 @@
     <tr>
       <th>Method name</th>
       <th>Times of called</th>
-      <th>Observation start date</th>
+      <th>Days monitored</th>
+      <th>Monitoring start date</th>
     </tr>
     <% @method_call_situations.each do |method_call_situation| %>
       <tr>
@@ -38,6 +39,9 @@
         </td>
         <td>
           <%= method_call_situation.called_num %>
+        </td>
+        <td>
+          <%= (Time.zone.today - method_call_situation.created_at.to_date).to_i %>
         </td>
         <td>
           <%= method_call_situation.created_at %>
