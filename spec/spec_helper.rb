@@ -12,8 +12,12 @@ require File.expand_path("../dummy/config/environment.rb", __FILE__)
 require "rspec/rails"
 require "factory_girl"
 require "factories"
+require "capybara/rspec"
+require "database_cleaner"
 
-require 'database_cleaner'
+RSpec.configure do |config|
+  config.include OkuribitoRails::Engine.routes.url_helpers
+end
 
 RSpec.configure do |config|
   config.before(:suite) do
