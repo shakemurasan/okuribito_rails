@@ -6,8 +6,7 @@ module OkuribitoRails
 
     def available_action!
       if prohibited_env?
-        render nothing: true, status: 403
-        return
+        head :forbidden
       end
     end
 
