@@ -6,7 +6,7 @@
 
 https://rubygems.org/gems/okuribito_rails
 
-![Sample](https://raw.githubusercontent.com/muramurasan/okuribito_rails/master/doc/sample.png)
+![Sample](https://raw.githubusercontent.com/muramurasan/okuribito_rails/master/doc/method_call_situations.png)
 
 OkuribitoRails is an engine for Rails that aims to manage method call status.
 
