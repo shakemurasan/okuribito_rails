@@ -2,13 +2,7 @@ module OkuribitoRails
   class ApplicationController < ActionController::Base
     protect_from_forgery
 
-    before_action :available_action!
-
-    def available_action!
-      if prohibited_env?
-        head :forbidden
-      end
-    end
+    before_action -> { head :forbidden }, if: -> { prohibited_env? }
 
     private
 
