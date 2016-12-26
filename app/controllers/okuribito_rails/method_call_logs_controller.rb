@@ -4,7 +4,7 @@ module OkuribitoRails
   class MethodCallLogsController < ApplicationController
     def index
       @method_call_logs = MethodCallLog
-                          .search(params.presence || {})
+                          .search(method_call_log_params.presence || {})
                           .page(params[Kaminari.config.param_name])
     end
 

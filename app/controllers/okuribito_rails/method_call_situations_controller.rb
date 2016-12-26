@@ -4,7 +4,7 @@ module OkuribitoRails
   class MethodCallSituationsController < ApplicationController
     def index
       @method_call_situations = MethodCallSituation
-                                .search(params.presence || {})
+                                .search(method_call_situation_params.presence || {})
                                 .page(params[Kaminari.config.param_name])
                                 .order(class_name: :asc, method_symbol: :asc, method_name: :asc)
     end
