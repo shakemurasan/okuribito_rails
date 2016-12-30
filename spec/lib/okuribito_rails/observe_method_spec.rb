@@ -6,7 +6,6 @@ describe OkuribitoRails::ObserveMethod do
 
   describe "create MethodCallLog" do
     before do
-      allow_any_instance_of(OkuribitoRails::ObserveMethod).to receive(:config_once_detect).and_return(true)
       FactoryGirl.create(:method_call_situation)
       okuribito = OkuribitoRails::ObserveMethod.new.patch_okuribito
       okuribito.apply(setting_path)
