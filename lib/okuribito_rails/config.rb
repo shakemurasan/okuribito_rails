@@ -17,5 +17,9 @@ module OkuribitoRails
     config_accessor :prohibit_observe do
       ["test"]
     end
+
+    config_accessor :force_eager_load do
+      ["test"]
+    end
   end
 end

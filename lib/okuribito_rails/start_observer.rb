@@ -7,6 +7,8 @@ module OkuribitoRails
       return if prohibit_env? || before_migrate?
       return unless File.exist?(yaml_path = setting_path)
 
+      Rails.application.eager_load! if force_eager_load?
+
       regist_method(yaml_path)
       start_observer(yaml_path)
     end
@@ -15,6 +17,10 @@ module OkuribitoRails
 
     def prohibit_env?
       OkuribitoRails.config.prohibit_observe.include?(ENV["RAILS_ENV"])
+    end
+
+    def force_eager_load?
+      OkuribitoRails.config.force_eager_load.include?(ENV["RAILS_ENV"])
     end
 
     def before_migrate?
