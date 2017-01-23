@@ -39,9 +39,7 @@ https://github.com/muramurasan/okuribito_rails/wiki
 
 # Caution!
 
-OkuribitoRails does not support namespaces.
-
-We already scheduled the feature, please wait.
+Sorry, OkuribitoRails does not support helper method monitoring.
 
 # License
 
