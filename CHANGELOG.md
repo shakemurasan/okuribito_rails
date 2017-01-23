@@ -1,4 +1,7 @@
 # CHANGELOG
+## [0.2.2](https://github.com/muramurasan/okuribito_rails/releases/tag/v0.2.2) (January 23, 2017)
+* Fix pagination (Specify okuribito_rails template)
+
 ## [0.2.1](https://github.com/muramurasan/okuribito_rails/releases/tag/v0.2.1) (December 31, 2016)
 * Add `force_eager_load` config
 
