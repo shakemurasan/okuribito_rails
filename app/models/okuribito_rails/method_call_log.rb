@@ -6,8 +6,8 @@ module OkuribitoRails
     validates :method_symbol, presence: true, inclusion: { in: %w(. #) }
     validates :method_name, presence: true, length: { minimum: 1, maximum: 255 }
 
-    scope :with_class_name, ->(class_name) { where(class_name: class_name) }
-    scope :with_method_name, ->(method_name) { where(method_name: method_name) }
+    scope :with_class_name, ->(class_name) { where("class_name LIKE ?", "%#{class_name}%") }
+    scope :with_method_name, ->(method_name) { where("method_name LIKE ?", "%#{method_name}%") }
 
     def self.search(args)
       mcl = self
