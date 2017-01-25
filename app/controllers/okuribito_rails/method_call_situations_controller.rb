@@ -12,7 +12,7 @@ module OkuribitoRails
     private
 
     def method_call_situation_params
-      params.permit(:class_name, :method_name, :x_days_passed, :uncalled_method)
+      params.permit(:class_name, :method_name, :x_days_passed, :uncalled_method, :called_method)
     end
   end
 end

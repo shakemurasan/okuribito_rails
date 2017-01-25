@@ -14,8 +14,12 @@
         <%= number_field_tag :x_days_passed, params[:x_days_passed], placeholder: 0 %>
       </dt>
       <dt>
-        <label>Uncalled method</label>
+        <label>Uncalled</label>
         <%= check_box_tag :uncalled_method, true, params[:uncalled_method]  %>
+      </dt>
+      <dt>
+        <label>Called</label>
+        <%= check_box_tag :called_method, true, params[:called_method]  %>
       </dt>
       <dd>
         <button>Search</button>

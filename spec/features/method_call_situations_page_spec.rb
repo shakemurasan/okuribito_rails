@@ -4,7 +4,8 @@ RSpec.feature "method_call_situation pages", type: :feature do
       expect(page).to have_content "Class name"
       expect(page).to have_content "Method name"
       expect(page).to have_content "x days passed"
-      expect(page).to have_content "Uncalled method"
+      expect(page).to have_content "Uncalled"
+      expect(page).to have_content "Called"
     end
   end
 
@@ -67,6 +68,20 @@ RSpec.feature "method_call_situation pages", type: :feature do
 
       within(".search-area") do
         fill_in "method_name", with: "file"
+        click_button "Search"
+      end
+
+      expect_search_area
+      expect_method_call_info
+      expect(page).to have_selector("table.method_call_info tbody tr", count: 2)
+    end
+
+    scenario "Available search function(called method)" do
+      expect(current_path).to eq method_call_situations_path
+      expect(page).to have_http_status(200)
+
+      within(".search-area") do
+        check "called_method"
         click_button "Search"
       end
 

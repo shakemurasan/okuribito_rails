@@ -14,6 +14,7 @@ module OkuribitoRails
     scope :with_days_passed,
           ->(num) { where("created_at <= ?", Time.zone.today.days_ago(num).end_of_day) }
     scope :with_uncalled_method, -> { where(called_num: 0) }
+    scope :with_called_method, -> { where(called_num: 1..Float::INFINITY) }
 
     def self.search(args)
       mcs = self
@@ -21,6 +22,7 @@ module OkuribitoRails
       mcs = mcs.with_method_name(args[:method_name]) if args[:method_name].present?
       mcs = mcs.with_days_passed(args[:x_days_passed].to_i) if args[:x_days_passed].present?
       mcs = mcs.with_uncalled_method if args[:uncalled_method].present?
+      mcs = mcs.with_called_method if args[:called_method].present?
       mcs
     end
   end
