@@ -111,4 +111,16 @@ describe OkuribitoRails::MethodCallSituation do
       it { is_expected.not_to be_valid }
     end
   end
+
+  describe "duplicate registration" do
+    before do
+      FactoryGirl.create(:method_call_situation,
+                         class_name: class_name,
+                         method_symbol: method_symbol,
+                         method_name: method_name,
+                         called_num: called_num)
+    end
+
+    it { is_expected.not_to be_valid }
+  end
 end

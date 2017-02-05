@@ -2,7 +2,10 @@ module OkuribitoRails
   class MethodCallSituation < ActiveRecord::Base
     has_many :method_call_logs
 
-    validates :class_name, presence: true, length: { minimum: 1, maximum: 255 }
+    validates :class_name,
+              presence: true,
+              length: { minimum: 1, maximum: 255 },
+              uniqueness: { scope: [:method_symbol, :method_name] }
     validates :method_symbol, presence: true, inclusion: { in: %w(. #) }
     validates :method_name, presence: true, length: { minimum: 1, maximum: 255 }
     validates :called_num,

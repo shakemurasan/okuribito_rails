@@ -1,4 +1,8 @@
 # CHANGELOG
+## [0.2.3](https://github.com/muramurasan/okuribito_rails/releases/tag/v0.2.3) (xxxxxxx xx, 2017)
+* Fix the following issue:
+** method_call_situation don't allow duplicated registration #52
+
 ## [0.2.3](https://github.com/muramurasan/okuribito_rails/releases/tag/v0.2.3) (January 26, 2017)
 * Fix the following issue:
 ** Search: Add called method query #48
