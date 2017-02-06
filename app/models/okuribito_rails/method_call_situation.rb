@@ -18,6 +18,7 @@ module OkuribitoRails
           ->(num) { where("created_at <= ?", Time.zone.today.days_ago(num).end_of_day) }
     scope :with_uncalled_method, -> { where(called_num: 0) }
     scope :with_called_method, -> { where(called_num: 1..Float::INFINITY) }
+    scope :group_by_method, -> { group("class_name", "method_symbol", "method_name") }
 
     def self.search(args)
       mcs = self
