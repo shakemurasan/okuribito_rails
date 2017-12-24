@@ -1,4 +1,4 @@
-class CreateOkuribitoRailsMethodCallSituations < ActiveRecord::Migration
+class CreateOkuribitoRailsMethodCallSituations < OkuribitoRails::Migration
   def change
     create_table :okuribito_rails_method_call_situations do |t|
       t.string :class_name, null: false
